@@ -32,12 +32,18 @@
     f.addEventListener('submit',function(e){
       e.preventDefault();
       var g=function(n){var el=f.elements[n];return el?el.value.trim():''};
-      if(!g('name')||!g('phone')){(f.elements[g('name')?'phone':'name']).focus();f.querySelector('.form-msg').textContent='נא למלא שם וטלפון.';return}
-      var msg='היי אשד, פנייה מהאתר ('+f.dataset.topic+')\nשם: '+g('name')+'\nטלפון: '+g('phone')+(g('org')?'\nמוסד: '+g('org'):'')+(g('msg')?'\n'+g('msg'):'');
-      var url='https://wa.me/972529456936?text='+encodeURIComponent(msg);
-      var a=f.querySelector('.send-link');a.href=url;a.hidden=false;
-      f.querySelector('.form-msg').textContent='ההודעה מוכנה. לחצו כדי לשלוח אותה בווטסאפ.';
-      try{window.open(url,'_blank','noopener')}catch(err){}
+      var out=f.querySelector('.form-msg'), wa=f.querySelector('.send-link'), btn=f.querySelector('button[type=submit]');
+      if(!g('name')||!g('phone')){(f.elements[g('name')?'phone':'name']).focus();out.textContent='נא למלא שם וטלפון.';return}
+      var msg='פנייה מהאתר ('+f.dataset.topic+')\nשם: '+g('name')+'\nטלפון: '+g('phone')+(g('org')?'\nמוסד: '+g('org'):'')+(g('msg')?'\n'+g('msg'):'');
+      wa.href='https://wa.me/972529456936?text='+encodeURIComponent('היי אשד, '+msg);
+      btn.disabled=true; out.textContent='שולח...';
+      fetch('https://formsubmit.co/ajax/maslul.derech@gmail.com',{method:'POST',headers:{'Content-Type':'application/json','Accept':'application/json'},
+        body:JSON.stringify({_subject:'פנייה חדשה מהאתר: '+f.dataset.topic,_template:'table',_captcha:'false','נושא':f.dataset.topic,'שם':g('name'),'טלפון':g('phone'),'מוסד':g('org'),'הודעה':g('msg')})})
+      .then(function(r){return r.json()}).then(function(d){
+        if(d&&(d.success==='true'||d.success===true)){f.reset();out.textContent='תודה! הפנייה נשלחה, ואחזור אליך בהקדם.';wa.hidden=true}
+        else throw 0;
+      }).catch(function(){out.textContent='השליחה לא הצליחה. אפשר לשלוח את אותה הודעה בווטסאפ:';wa.hidden=false})
+      .then(function(){btn.disabled=false});
     });
   });
 })();
