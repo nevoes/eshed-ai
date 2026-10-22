@@ -493,3 +493,12 @@ html,body{overflow-x:clip;max-width:100%}
 @media (max-width:900px){.dd-panel{display:none}}
 img,svg,canvas,video{max-width:100%}
 
+
+/* Syllabus: larger, easier to read on every page */
+.syll li{padding-block:18px}
+.syll .n{font-size:1.7rem}
+.syll h3{font-size:1.18rem}
+.syll .desc{font-size:1.04rem;line-height:1.6}
+.syll .type{font-size:.95rem}
+.syll .tools.mono{font-size:.88rem}
+.syll .tools span{padding:2px 9px}
