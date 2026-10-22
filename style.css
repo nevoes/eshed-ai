@@ -502,3 +502,8 @@ img,svg,canvas,video{max-width:100%}
 .syll .type{font-size:.95rem}
 .syll .tools.mono{font-size:.88rem}
 .syll .tools span{padding:2px 9px}
+
+/* Card highlight tags on the home page — one strong point per training */
+.products .tag{justify-self:start;display:inline-flex;align-items:center;gap:4px;padding:5px 12px;border-radius:999px;background:#12B886;color:#fff;font-weight:700;font-size:.88rem;box-shadow:0 6px 14px -8px rgba(0,0,0,.45)}
+.products .tag.hot{background:linear-gradient(135deg,#F7B733,#F2994A);color:#4A1F00}
+.products .k{color:var(--muted)}
