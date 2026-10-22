@@ -449,3 +449,14 @@ section:not(.band):not(.alt):not(.cta){background:
 .sec-head h2{background:linear-gradient(90deg,#0E4766,#1E6FB8 55%,#0B8A63);-webkit-background-clip:text;background-clip:text;color:transparent}
 .aud span{background:#fff;color:#0B6E8A;border:1px solid #9FD3DF}
 .quote{border-inline-start-color:#2F80ED}
+
+/* ===== Phone readability: larger, bolder, higher-contrast text on every page ===== */
+@media (max-width:700px){
+  html{font-size:115%;-webkit-text-size-adjust:100%}
+  :root{--muted:#2F465A}
+  body{font-weight:500}
+  .band .lead{color:var(--on-night)}
+  p,li,.desc{line-height:1.65}
+  h3,.syll h3{font-weight:700}
+  .tools span,.meta span,.aud span,.specs small,.syll .type,.brand small,.crumb,.creds span{font-weight:600}
+}
