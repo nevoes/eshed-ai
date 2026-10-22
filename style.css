@@ -477,3 +477,12 @@ section:not(.band):not(.alt):not(.cta){background:
 .dd-panel a{color:var(--ink);padding:10px 12px;border-radius:10px;border:0;font-weight:600;white-space:nowrap}
 .dd-panel a:hover,.dd-panel a[aria-current="page"]{background:var(--blaze-soft);color:var(--blaze-ink)}
 .approved{width:fit-content;justify-self:start}
+
+/* "Why bring it to your organization" benefit cards */
+.why{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:14px}
+.why div{background:var(--surface);border-radius:var(--r);box-shadow:var(--shadow);padding:18px;border-top:4px solid #2F80ED}
+.why div:nth-child(2){border-top-color:#12B886}.why div:nth-child(3){border-top-color:#F2994A}.why div:nth-child(4){border-top-color:#0E4766}
+.why b{font-family:var(--display);font-size:1.25rem;display:block;margin-bottom:4px}
+.why p{margin:0;color:var(--muted);font-size:.97rem;line-height:1.55}
+@media (max-width:860px){.why{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media (max-width:460px){.why{grid-template-columns:1fr}}
