@@ -460,3 +460,20 @@ section:not(.band):not(.alt):not(.cta){background:
   h3,.syll h3{font-weight:700}
   .tools span,.meta span,.aud span,.specs small,.syll .type,.brand small,.crumb,.creds span{font-weight:600}
 }
+
+/* Approval badge (ministry recognition) in hero bands */
+.approved{display:inline-flex;align-items:center;gap:8px;margin:4px 0 14px;padding:7px 16px 7px 14px;border-radius:999px;background:#12B886;color:#fff;font-weight:700;font-size:.95rem;box-shadow:0 8px 20px -10px rgba(0,0,0,.5)}
+.approved svg{width:18px;height:18px;flex:none}
+
+/* Desktop "השתלמויות" dropdown */
+.dd{position:relative}
+.dd>button{all:unset;cursor:pointer;display:inline-flex;align-items:center;gap:6px;font-weight:600;font-size:.95rem;color:var(--on-night-muted);padding-block:6px;border-bottom:2px solid transparent}
+.dd>button span{font-size:.75em}
+.dd.is-active>button,.dd:hover>button,.dd:focus-within>button{color:var(--on-night)}
+.dd.is-active>button{border-color:var(--blaze)}
+.dd-panel{position:absolute;top:100%;inset-inline-start:-12px;min-width:250px;padding:8px;margin-top:8px;background:var(--surface);border-radius:14px;box-shadow:0 18px 40px -16px rgba(10,58,90,.55);display:grid;opacity:0;visibility:hidden;transform:translateY(-4px);transition:.15s}
+.dd-panel::before{content:"";position:absolute;inset:-12px 0 auto;height:12px}
+.dd:hover .dd-panel,.dd:focus-within .dd-panel{opacity:1;visibility:visible;transform:none}
+.dd-panel a{color:var(--ink);padding:10px 12px;border-radius:10px;border:0;font-weight:600;white-space:nowrap}
+.dd-panel a:hover,.dd-panel a[aria-current="page"]{background:var(--blaze-soft);color:var(--blaze-ink)}
+.approved{width:fit-content;justify-self:start}
