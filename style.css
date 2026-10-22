@@ -426,18 +426,26 @@ h1,h2,h3{font-weight:700;letter-spacing:-.01em}
 @media (prefers-reduced-motion:reduce){.pn,.mg-bot{animation:none}}
 
 
-/* ===== Marketing palette: keep the blue bands, soften the page (no glare), add color rhythm ===== */
+/* ===== Marketing palette v2: blue bands, richer tinted backgrounds, bold color rhythm ===== */
 :root{
-  --paper:#E9F0F6; --surface:#F8FBFD; --line:#D3DEE8; --muted:#4F6476;
-  --shadow:0 14px 34px -22px rgba(14,71,102,.55);
+  --paper:#CFE3EE; --surface:#F4F9FC; --line:#AFC8D8; --muted:#3E566A; --ink:#0E2E45;
+  --shadow:0 16px 36px -20px rgba(10,58,90,.6);
 }
-body{background:#E9F0F6}
-section:not(.band):not(.alt):not(.cta){background:linear-gradient(180deg,#EDF3F8 0%,#E7EFF6 100%)}
-.alt{background:linear-gradient(135deg,#DDEEF1 0%,#E2EAF6 100%)}
-.alt .orgs li{background:var(--surface)}
-.products a:nth-child(3n+1){border-top-color:#12B886}
-.products a:nth-child(3n+2){border-top-color:#2F80ED}
-.products a:nth-child(3n+3){border-top-color:#F2994A}
-.orgs li{border-top:3px solid #2F80ED}
-.orgs li:nth-child(even){border-top-color:#12B886}
-.sec-head h2{background:linear-gradient(90deg,#0E4766,#1E6FB8);-webkit-background-clip:text;background-clip:text;color:transparent}
+body{background:#CFE3EE}
+section:not(.band):not(.alt):not(.cta){background:
+  radial-gradient(60% 50% at 100% 0%,rgba(47,128,237,.22),transparent 70%),
+  radial-gradient(50% 45% at 0% 100%,rgba(18,184,134,.22),transparent 70%),
+  linear-gradient(180deg,#D3E6F0 0%,#C8DDEC 100%)}
+.alt{background:
+  radial-gradient(55% 50% at 0% 0%,rgba(242,153,74,.20),transparent 70%),
+  linear-gradient(135deg,#B9E2E0 0%,#BCD3F0 100%)}
+.alt .orgs li,.orgs li{background:var(--surface)}
+.products a:nth-child(3n+1){border-top:6px solid #12B886}
+.products a:nth-child(3n+2){border-top:6px solid #2F80ED}
+.products a:nth-child(3n+3){border-top:6px solid #F2994A}
+.orgs li{border-top:4px solid #2F80ED}
+.orgs li:nth-child(3n+2){border-top-color:#12B886}
+.orgs li:nth-child(3n+3){border-top-color:#F2994A}
+.sec-head h2{background:linear-gradient(90deg,#0E4766,#1E6FB8 55%,#0B8A63);-webkit-background-clip:text;background-clip:text;color:transparent}
+.aud span{background:#fff;color:#0B6E8A;border:1px solid #9FD3DF}
+.quote{border-inline-start-color:#2F80ED}
