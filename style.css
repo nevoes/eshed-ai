@@ -8,16 +8,8 @@
   --body:"IBM Plex Sans Hebrew","Assistant","Segoe UI",Arial,sans-serif;
   --mono:"IBM Plex Mono",ui-monospace,Menlo,monospace;
   --max:1120px; --r:10px;
-  color-scheme:light;
+  color-scheme:only light;
 }
-@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
-  --paper:#111816; --surface:#18221F; --ink:#E6ECE8; --muted:#A1B0AA; --line:#2A3833;
-  --night:#0A1110; --night-2:#121C19; --contour:#36504A;
-  --blaze:#F5B02E; --blaze-ink:#F5B02E; --blaze-soft:#3A2E14; --wa:#2BC066; color-scheme:dark}}
-:root[data-theme="dark"]{
-  --paper:#111816; --surface:#18221F; --ink:#E6ECE8; --muted:#A1B0AA; --line:#2A3833;
-  --night:#0A1110; --night-2:#121C19; --contour:#36504A;
-  --blaze:#F5B02E; --blaze-ink:#F5B02E; --blaze-soft:#3A2E14; --wa:#2BC066; color-scheme:dark}
 
 *{box-sizing:border-box}
 :root{box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
@@ -323,16 +315,6 @@ a:hover .blaze i:nth-child(2),.eyebrow:hover .blaze i:nth-child(2){transform:sca
   --body:"Heebo","Rubik","Segoe UI",Arial,sans-serif;
   --r:16px;
 }
-@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
-  --paper:#0E1A24; --surface:#142533; --ink:#E8F0F6; --muted:#9FB2C2; --line:#22384A;
-  --night:#0A2E44; --night-2:#08263A; --contour:#4F8EA6;
-  --blaze:#2BD19C; --blaze-ink:#2BD19C; --blaze-soft:#123A2E;
-  --grad:linear-gradient(135deg,#0B4F5E 0%,#123A6E 100%); --shadow:0 12px 32px -20px rgba(0,0,0,.7); color-scheme:dark}}
-:root[data-theme="dark"]{
-  --paper:#0E1A24; --surface:#142533; --ink:#E8F0F6; --muted:#9FB2C2; --line:#22384A;
-  --night:#0A2E44; --night-2:#08263A; --contour:#4F8EA6;
-  --blaze:#2BD19C; --blaze-ink:#2BD19C; --blaze-soft:#123A2E;
-  --grad:linear-gradient(135deg,#0B4F5E 0%,#123A6E 100%); --shadow:0 12px 32px -20px rgba(0,0,0,.7); color-scheme:dark}
 
 h1,h2,h3{font-weight:700;letter-spacing:-.01em}
 .top{background:color-mix(in srgb,var(--night) 96%,transparent)}
