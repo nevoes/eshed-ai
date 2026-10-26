@@ -72,3 +72,13 @@
     }
   });
 })();
+/* dropdown: announce open/closed state, close on Escape */
+(function(){
+  document.querySelectorAll('.dd').forEach(function(dd){
+    var b=dd.querySelector('button');if(!b)return;
+    var set=function(v){b.setAttribute('aria-expanded',v?'true':'false')};
+    dd.addEventListener('mouseenter',function(){dd.classList.remove('closed');set(1)});dd.addEventListener('mouseleave',function(){if(!dd.contains(document.activeElement))set(0)});
+    dd.addEventListener('focusin',function(){set(1)});dd.addEventListener('focusout',function(e){if(!dd.contains(e.relatedTarget)){set(0);dd.classList.remove('closed')}});
+    dd.addEventListener('keydown',function(e){if(e.key==='Escape'){set(0);b.focus();dd.classList.add('closed')}});
+  });
+})();
