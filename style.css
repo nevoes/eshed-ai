@@ -523,3 +523,5 @@ main:focus{outline:none}
 .btn-blaze,.copy-p,.approved,.skip-link{background:#0A7A57;color:#fff}
 .btn-blaze:hover{background:#086247}
 .band .eyebrow,.menu .panel a[aria-current="page"]{color:#5EE0B5}
+.orgs.o3{grid-template-columns:repeat(3,minmax(0,1fr))}
+@media (max-width:760px){.orgs.o3{grid-template-columns:1fr}}
