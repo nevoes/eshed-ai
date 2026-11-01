@@ -194,6 +194,9 @@ footer.site .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:
 footer.site nav{display:flex;flex-wrap:wrap;gap:6px 18px}
 footer.site a{text-decoration:none}
 footer.site a:hover{color:var(--on-night)}
+footer.site .foot-contact{display:flex;flex-wrap:wrap;gap:8px}
+footer.site .foot-btn{display:inline-flex;align-items:center;gap:6px;padding:7px 14px;border-radius:999px;border:1px solid color-mix(in srgb,var(--on-night) 35%,transparent);color:var(--on-night);direction:ltr;unicode-bidi:isolate}
+footer.site .foot-btn:hover{background:color-mix(in srgb,var(--on-night) 12%,transparent)}
 
 .wa-float{position:fixed;left:calc(16px + env(safe-area-inset-left,0px));bottom:calc(16px + env(safe-area-inset-bottom,0px));z-index:35;width:56px;height:56px;border-radius:50%;background:var(--wa);color:#fff;display:none;place-items:center;box-shadow:0 8px 22px -6px rgba(0,0,0,.45)}
 .wa-float svg{width:30px;height:30px}
