@@ -186,6 +186,7 @@ section{padding-block:clamp(48px,7vw,88px)}
 .cta .wrap{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:20px}
 .cta h2{font-size:clamp(1.6rem,3.6vw,2.4rem)}
 .cta p{color:var(--on-night-muted)}
+.cta p a{color:var(--on-night);text-decoration:underline;text-underline-offset:3px}
 .cta .txt{display:grid;gap:8px;min-width:0;flex:1 1 360px}
 
 footer.site{background:var(--night);color:var(--on-night-muted);font-size:.88rem;border-top:1px solid color-mix(in srgb,var(--on-night) 10%,transparent)}
